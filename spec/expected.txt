@@ -1,0 +1,14 @@
+<span class="hljs-comment">/* Highlight.js est for Arcade */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testGeometry</span>(<span class="hljs-params">element, point</span>) </span>{
+    <span class="hljs-keyword">if</span> (point.y != <span class="hljs-number">-1</span>)
+        <span class="hljs-keyword">return</span> point;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span> / <span class="hljs-number">2</span>; i &lt; element.length; i++) {
+        <span class="hljs-keyword">if</span> (checkCondition(<span class="hljs-symbol">$map</span>.element[i]) === <span class="hljs-literal">Infinity</span>) {
+            <span class="hljs-keyword">return</span> element[i];
+        }
+    }
+    <span class="hljs-keyword">return</span> element;
+}
+<span class="hljs-keyword">var</span> filePath = <span class="hljs-string">"literal "</span> + TextFormatting.<span class="hljs-literal">BackSlash</span> + TextFormatting.<span class="hljs-literal">SingleQuote</span> + <span class="hljs-string">".ext"</span>
+<span class="hljs-keyword">var</span> d = <span class="hljs-built_in">Dictionary</span>(<span class="hljs-string">"field1"</span>, <span class="hljs-number">1</span>, <span class="hljs-string">"field2"</span>,<span class="hljs-number">2</span>);
+<span class="hljs-keyword">return</span> <span class="hljs-built_in">FeatureSet</span>(<span class="hljs-symbol">$map</span>, [<span class="hljs-string">"POPULATION"</span>, <span class="hljs-string">"ELECTION-DATA"</span>]);
