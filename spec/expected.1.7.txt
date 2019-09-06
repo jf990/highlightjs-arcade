@@ -1,0 +1,7 @@
+<span class="hljs-comment">/* Highlight.js est for Arcade 1.7.0 new features */</span>
+<span class="hljs-keyword">var</span> urlsource = <span class="hljs-string">'arcgis-survey123://?'</span>;
+<span class="hljs-keyword">var</span> params = {
+  <span class="hljs-attr">startTime</span>: <span class="hljs-built_in">TrackStartTime</span>();,
+  <span class="hljs-attr">bearing</span>: <span class="hljs-built_in">Bearing</span>(pointA, <span class="hljs-symbol">$source</span><span class="hljs-built_in">Feature</span>)
+};
+<span class="hljs-keyword">return</span> urlsource  + <span class="hljs-built_in">UrlEncode</span>(params);

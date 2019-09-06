@@ -1,0 +1,7 @@
+/* Highlight.js est for Arcade 1.7.0 new features */
+var urlsource = 'arcgis-survey123://?';
+var params = {
+  startTime: TrackStartTime();,
+  bearing: Bearing(pointA, $sourceFeature)
+};
+return urlsource  + UrlEncode(params);
