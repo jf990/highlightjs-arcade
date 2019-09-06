@@ -14,21 +14,22 @@ function hljsDefineArcade(hljs) {
       literal:
         'true false null undefined NaN Infinity PI BackSlash DoubleQuote ForwardSlash NewLine SingleQuote Tab',
       built_in:
-        'Abs Acos Area AreaGeodetic Asin Atan Atan2 Average Boolean Buffer BufferGeodetic ' +
+        'Abs Acos Angle Attachments Area AreaGeodetic Asin Atan Atan2 Average Bearing Boolean Buffer BufferGeodetic ' +
         'Ceil Centroid Clip Console Constrain Contains Cos Count Crosses Cut Date DateAdd ' +
         'DateDiff Day Decode DefaultValue Dictionary Difference Disjoint Distance Distinct ' +
         'DomainCode DomainName Equals Exp Extent Feature FeatureSet FeatureSetById FeatureSetByTitle ' +
         'FeatureSetByUrl Filter First Floor Geometry Guid HasKey Hour IIf IndexOf Intersection ' +
-        'Intersects IsEmpty Length LengthGeodetic Log Max Mean Millisecond Min Minute Month ' +
+        'Intersects IsEmpty IsNan Length LengthGeodetic Log Max Mean Millisecond Min Minute Month ' +
         'MultiPartToSinglePart Multipoint NextSequenceValue Now Number OrderBy Overlaps Point Polygon ' +
-        'Polyline Pow Random Relate Reverse Round Second SetGeometry Sin Sort Sqrt Stdev Sum ' +
-        'SymmetricDifference Tan Text Timestamp Today ToLocal Top Touches ToUTC TypeOf Union Variance ' +
+        'Polyline Pow Random Relate Reverse RingIsClockWise Round Second SetGeometry Sin Sort Sqrt Stdev Sum ' +
+        'SymmetricDifference Tan Text Timestamp Today ToLocal Top Touches ToUTC TrackCurrentTime ' +
+        'TrackGeometryWindow TrackIndex TrackStartTime TrackWindow TypeOf Union UrlEncode Variance ' +
         'Weekday When Within Year '
     };
     var EXPRESSIONS;
     var SYMBOL = {
       className: 'symbol',
-      begin: '\\$[feature|layer|map|value|view]+'
+      begin: '\\$[datastore|feature|layer|map|measure|sourcefeature|sourcelayer|targetfeature|targetlayer|value|view]+'
     };
     var NUMBER = {
       className: 'number',
