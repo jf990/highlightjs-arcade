@@ -39,7 +39,7 @@ Include `highlight.js` distribution on your webpage, get the standard highlight.
 ### webpack / rollup / browserify / node
 
 ```javascript
-const hljs = require('highlight.js');
+const hljs = require('highlightjs');
 const hljsArcade = require('highlightjs-arcade');
 
 hljsArcade(hljs);
