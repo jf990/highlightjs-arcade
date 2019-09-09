@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>highlight.js for Arcade</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/darcula.min.css">
+</head>
+<body>
+  <h1>highlight.js for Arcade</h1>
+  <p>Example that demonstrates using webpack with <a href="https://highlightjs.org/usage/">Highlight.js</a> and the <a href="https://developers.arcgis.com/arcade/">ArcGIS Arcade</a> expression language.</p>
+  <div id="arcade">
+    <pre><code class="arcade">
+      /* This is Arcade code */
+      function getFeatureValue(parameter)
+      {
+         var d = Dictionary("field1", Geometry($feature), "field2", Concatenate(DefaultValue(5), PI));
+         var c = {
+                "field1": $feature.value,
+                "field2": $view.width
+         }
+         if (parameter == undefined) {
+            parameter = Extent($view)
+         }
+         return d.field1 + d["field2"];   // Can access elements with either notation
+      }
+    </code></pre>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
