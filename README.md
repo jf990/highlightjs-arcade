@@ -36,6 +36,8 @@ Include `highlight.js` distribution on your webpage, get the standard highlight.
 </script>
 ```
 
+View a sample of this by loading `index.html` found in the `sample` folder.
+
 ### webpack / rollup / browserify / node
 
 ```javascript
@@ -45,6 +47,16 @@ const hljsArcade = require('highlightjs-arcade');
 hljsArcade(hljs);
 hljs.initHighlightingOnLoad();
 ```
+
+To view a sample of this workflow, you will be required to have previously installed node and webpack.
+
+```bash
+cd sample
+npm install
+npm run build
+```
+
+Then view `dist/index.html` from a browser.
 
 ## Contributing
 
