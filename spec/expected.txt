@@ -4,7 +4,7 @@
         <span class="hljs-keyword">return</span> point;
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span> / <span class="hljs-number">2</span>; i &lt; element.length; i++) {
         <span class="hljs-keyword">if</span> (checkCondition(<span class="hljs-symbol">$map</span>.element[i]) === <span class="hljs-literal">Infinity</span>) {
-            <span class="hljs-keyword">return</span> element[i];
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">DistanceGeodetic</span>(element[i]);
         }
     }
     <span class="hljs-keyword">return</span> element;
