@@ -14,7 +14,7 @@
     "url": "https://github.com/jf990/highlightjs-arcade/issues"
   },
   "devDependencies": {
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.4.1",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8"
   }
