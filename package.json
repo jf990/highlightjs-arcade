@@ -1,6 +1,6 @@
 {
   "name": "highlightjs-arcade",
-  "version": "1.7.0",
+  "version": "1.16.0",
   "author": "John Foster",
   "description": "Arcade is an expression language that can be used across the ArcGIS Platform.",
   "main": "arcade.js",
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/jf990/highlightjs-arcade#readme",
   "devDependencies": {
-    "highlight.js": "^10.4.1",
-    "jasmine": "^3.4.0"
+    "highlight.js": "^11.3.1",
+    "jasmine": "^3.10.0"
   }
 }

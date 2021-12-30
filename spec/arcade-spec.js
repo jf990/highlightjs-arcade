@@ -1,59 +1,57 @@
-const hljs = require("highlight.js/lib/highlight");
-const { definer: arcade } = require("../arcade");
+/**
+ * Unit test for highlight grammar:
+ * - verifies language is loaded via highlightjs core
+ * - verifies expected version
+ * - verifies expected highlight grammar
+ */
+const hljs = require("highlight.js/lib/core");
+const arcade = require("../src/languages/arcade");
 const fs = require("fs");
 const path = require("path");
-hljs.registerLanguage("arcade", arcade);
+const languageName = "arcade";
+const testSourcePath = "../test/markup/" + languageName + "/";
+const testFiles = ["sample", "profile"];
+hljs.registerLanguage(languageName, arcade);
 
-describe("respec-highlight bundle", () => {
-  it("defines arcade", () => {
+describe("highlight " + languageName, () => {
+  it("defines " + languageName, () => {
 
-    // highlight has Arcade defined
-    const arcade = hljs.getLanguage("arcade");
-    expect(arcade).toBeDefined();
-
+    // highlight has language defined
+    const hljsArcade = hljs.getLanguage(languageName);
+    expect(hljsArcade).not.toBe(null);
   });
 
-  it("highlights arcade", () => {
-
-    // read the test data
-    const input = fs.readFileSync(
-      path.resolve(__dirname, "./input.txt"),
-      "utf-8"
-    );
-
-    // highlight the test data
-    const { value: result, language } = hljs.highlightAuto(input, [
-      "arcade",
-    ]);
-    expect(language).toBe("arcade");
-
-    // verify the highlighting is what is expected
-    const expected = fs.readFileSync(
-      path.resolve(__dirname, "./expected.txt"),
-      "utf-8"
-    );
-    expect(result).toBe(expected);
+  it("highlights " + languageName, () => {
+    const input = "return FeatureSet($map, [\"POPULATION\", \"ELECTION-DATA\"]);";
+    const expected = "<span class=\"hljs-keyword\">return</span> <span class=\"hljs-built_in\">FeatureSet</span>(<span class=\"hljs-symbol\">$map</span>, [<span class=\"hljs-string\">&quot;POPULATION&quot;</span>, <span class=\"hljs-string\">&quot;ELECTION-DATA&quot;</span>]);";
+    // highlight the test string
+    const result = hljs.highlight(input, { language: languageName, ignoreIllegals: true });
+    expect(result.language).toBe(languageName);
+    expect(result.value).toBe(expected);
   });
 
-  it("highlights arcade 1.7", () => {
+  it("highlights test files " + languageName, () => {
 
-    // read the test data
-    const input = fs.readFileSync(
-      path.resolve(__dirname, "./input.1.7.txt"),
-      "utf-8"
-    );
+    testFiles.forEach((file) => {
+      const testFileSourcePath = testSourcePath + file + ".txt";
+      const testFileExpectedPath = testSourcePath + file + ".expect.txt";
 
-    // highlight the test data
-    const { value: result, language } = hljs.highlightAuto(input, [
-      "arcade",
-    ]);
-    expect(language).toBe("arcade");
-
-    // verify the highlighting is what is expected
-    const expected = fs.readFileSync(
-      path.resolve(__dirname, "./expected.1.7.txt"),
-      "utf-8"
-    );
-    expect(result).toBe(expected);
+      // read the test data from a file
+      const sample = fs.readFileSync(
+        path.resolve(__dirname, testFileSourcePath),
+        "utf-8"
+      );
+  
+      // highlight the test data
+      const result = hljs.highlight(sample, { language: languageName, ignoreIllegals: true });
+      expect(result.language).toBe(languageName);
+  
+      // verify the highlighting is what is expected
+      const expected = fs.readFileSync(
+        path.resolve(__dirname, testFileExpectedPath),
+        "utf-8"
+      );
+      expect(result.value).toBe(expected);
+    });
   });
 });

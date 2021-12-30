@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>highlight.js for Arcade</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/darcula.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/dark.min.css">
 </head>
 <body>
   <h1>highlight.js for Arcade</h1>
@@ -23,6 +23,21 @@
          }
          return d.field1 + d["field2"];   // Can access elements with either notation
       }
+    </code></pre>
+  </div>
+  <p>Example that demonstrates using Arcade profile and latest functions.</p>
+  <div id="arcade">
+    <pre><code class="arcade">
+    /*
+      Isolated test for the most recent version
+    */
+    function offsetPopulation(offset){
+      var popDensity = Round( $feature.POPULATION / AreaGeodetic(Geometry($feature), "square-kilometers") );
+      iif (city1.pop > city2.pop, city1, Reduce(cities, mostPopulated));
+      var geom = Geometry({ 'x': offset.x, 'y': offset.y, 'spatialReference':{'wkid':102100} });
+      var myLayer = FeatureSet($map, ["POPULATION", "ELECTION-DATA"]);
+      return popDensity;
+    }
     </code></pre>
   </div>
   <script src="main.js"></script>

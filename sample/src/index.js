@@ -2,7 +2,6 @@
  * Demonstration using webpack with Highlight.js to test a local language definition.
  */
 const hljs = require('highlight.js');
-const hljsArcade = require('../../arcade.js');
+const hljsArcade = require('../../dist/arcade.es.min.js');
 
-hljsArcade(hljs);
-hljs.initHighlightingOnLoad();
+hljs.highlightAll();
