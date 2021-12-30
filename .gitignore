@@ -1,3 +1,14 @@
+.DS_Store
+*.swp
+.project
+yarn.lock
+
+# editors
+.idea/
+.nova/
+.vscode/
+.Rproj.user
+
 # Sample junk
 sample/dist/
 
