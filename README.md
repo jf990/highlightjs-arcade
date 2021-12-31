@@ -3,6 +3,8 @@
 [![License](https://badgen.net/badge/license/Apache-2.0/blue)](https://github.com/jf990/highlightjs-arcade/blob/master/LICENSE)
 [![Language](https://badgen.net/badge/language/Arcade-1.16.0/purple)](https://developers.arcgis.com/arcade/)
 
+> NOTE: ArcGIS Arcade official syntax highlighting is at https://github.com/highlightjs/highlight.js/blob/main/src/languages/arcade.js, this repo is only a work in progress and is not the official.
+
 Support for using `highlight.js` to syntax highlight Esri's ArcGIS Arcade scripts. See https://highlightjs.org/ for more information about highlight.js. See [ArcGIS Arcade](https://developers.arcgis.com/arcade/) for more information about the ArcGIS Arcade scripting language.
 
 ## Installation
